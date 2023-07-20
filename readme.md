@@ -1,5 +1,5 @@
 
-| COMMANDS | DESCRIPTIN |
+| COMMANDS | DESCRIPTION |
 |-|-|
 | `man` | read manual |
 | `curl` | |
