@@ -164,6 +164,10 @@ It can be combined with other commands, like `ls | grep "html"`
 - __Extract `.tar.bz2` archive__
 	- `tar -xjvf archive.tar.bz2 -C /pathtoextract`
 
+# Terminal
+Check what kind of terminal it is - "zsh/bash"
+`echo $0`
+
 ---
 
 # Websites
