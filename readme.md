@@ -165,8 +165,8 @@ It can be combined with other commands, like `ls | grep "html"`
 	- `tar -xjvf archive.tar.bz2 -C /pathtoextract`
 
 # Terminal
-Check what kind of terminal it is - "zsh/bash"
-`echo $0`
+- `echo $0` to check what kind of terminal it is _zsh_, _bash_
+- `echo $SHELL` to get the path of the termial (not sure) _`bin/zsh`_
 
 ---
 
