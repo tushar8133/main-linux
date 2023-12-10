@@ -29,9 +29,9 @@
 | `mv file1.txt file2.txt` | Rename Files |
 | `cp file1.txt ~/folder` | copy files |
 | `mkdir myfolder` | make directory |
-| `rmdir folder1` | remove directory and files within |
+| `rmdir folder1` | remove empty directory |
+| `rm -rf foldername` | remove directory with files (`-r` recursive, `-f` force) |
 | `rm test.txt` | remove files |
-| `rm -rf foldername` | remove folder with files (`-r` recursive, `-f` force) |
 | `locate -i redhouse**city*` | search in whole OS |
 | `pwd` | present working directory |
 | `whoami` | username |
