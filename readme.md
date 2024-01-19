@@ -168,6 +168,143 @@ It can be combined with other commands, like `ls | grep "html"`
 - `echo $0` to check what kind of terminal it is _zsh_, _bash_
 - `echo $SHELL` to get the path of the termial (not sure) _`bin/zsh`_
 
+
+# Terminal Color
+
+| value | name |
+|---|---|
+| 0 | Reset: turn off all attributes |
+| 1 | Bold (or bright, it’s up to the terminal and the user config to some extent) |
+| 3 | Italic |
+| 4 | Underline |
+| 30–37 | Set text colour from the basic colour palette of 0–7 |
+| 38;5;n | Set text colour to index n in a 256-colour palette (e.g.&nbsp;\x1b[38;5;34m) |
+| 38;2;r;g;b | Set text colour to an RGB value (e.g.&nbsp;\x1b[38;2;255;255;0m) |
+| 40–47 | Set background colour |
+| 48;5;n | Set background colour to index n in a 256-colour palette |
+| 48;2;r;g;b | Set background colour to an RGB value |
+| 90–97 | Set text colour from the bright colour palette of 0–7 |
+| 100–107 | Set background colour from the bright colour palette of 0–7 |
+
+
+<details>
+<summary>Extra detailed table (expand)</summary>
+
+| Code | Effect | Note |
+|---|---|---|
+| 0 | Reset / Normal | all attributes off |
+| 1 | Bold or increased intensity |
+| 2 | Faint (decreased intensity) | Not widely supported. |
+| 3 | Italic | Not widely supported. Sometimes treated as inverse. |
+| 4 | Underline |
+| 5 | Slow Blink | less than 150 per minute |
+| 6 | Rapid Blink | MS-DOS ANSI.SYS; 150+ per minute; not widely supported |
+| 7 | [[reverse video]] | swap foreground and background colors |
+| 8 | Conceal | Not widely supported. |
+| 9 | Crossed-out | Characters legible, but marked for deletion.  Not widely supported. |
+| 10 | Primary(default) font |
+| 11–19 | Alternate font | Select alternate font n-10 |
+| 20 | Fraktur | hardly ever supported |
+| 21 | Bold off or Double Underline | Bold off not widely supported; double underline hardly ever supported. |
+| 22 | Normal color or intensity | Neither bold nor faint |
+| 23 | Not italic, not Fraktur |
+| 24 | Underline off | Not singly or doubly underlined |
+| 25 | Blink off |
+| 27 | Inverse off |
+| 28 | Reveal | conceal off |
+| 29 | Not crossed out |
+| 30–37 | Set foreground color | See color table below |
+| 38 | Set foreground color | Next arguments are 5;&lt;n&gt; or 2;&lt;r&gt;;&lt;g&gt;;&lt;b&gt;, see below |
+| 39 | Default foreground color | implementation defined (according to standard) |
+| 40–47 | Set background color | See color table below |
+| 48 | Set background color | Next arguments are 5;&lt;n&gt; or 2;&lt;r&gt;;&lt;g&gt;;&lt;b&gt;, see below |
+| 49 | Default background color | implementation defined (according to standard) |
+| 51 | Framed |
+| 52 | Encircled |
+| 53 | Overlined |
+| 54 | Not framed or encircled |
+| 55 | Not overlined |
+| 60 | ideogram underline | hardly ever supported |
+| 61 | ideogram double underline | hardly ever supported |
+| 62 | ideogram overline | hardly ever supported |
+| 63 | ideogram double overline | hardly ever supported |
+| 64 | ideogram stress marking | hardly ever supported |
+| 65 | ideogram attributes off | reset the effects of all of 60-64 |
+| 90–97 | Set bright foreground color | aixterm (not in standard) |
+| 100–107 | Set bright background color | aixterm (not in standard) |
+
+</details>
+
+<details>
+<summary>All console.log(colors) (expand)</summary>
+
+```
+console.log(`\x1b[${0}mXXXXXXXXX\x1b[0m`, "0=default");
+console.log(`\x1b[${1}mXXXXXXXXX\x1b[0m`, "1=bold");
+console.log(`\x1b[${2}mXXXXXXXXX\x1b[0m`, "2=dull");
+console.log(`\x1b[${3}mXXXXXXXXX\x1b[0m`, "3=italic");
+console.log(`\x1b[${4}mXXXXXXXXX\x1b[0m`, "4=underline");
+console.log(`\x1b[${5}mXXXXXXXXX\x1b[0m`, "5=blink, tested in mac terminal");
+console.log(`\x1b[${7}mXXXXXXXXX\x1b[0m`, "7=inverse");
+console.log(`\x1b[${8}mXXXXXXXXX\x1b[0m`, "8=transparent");
+console.log(`\x1b[${9}mXXXXXXXXX\x1b[0m`, "9=striked-off, tested in node");
+console.log(`\x1b[${21}mXXXXXXXXX\x1b[0m`, "21=underline, tested in node");
+console.log(`\x1b[${30}mXXXXXXXXX\x1b[0m`, "30=fg-darker");
+console.log(`\x1b[${31}mXXXXXXXXX\x1b[0m`, "31=fg-red");
+console.log(`\x1b[${32}mXXXXXXXXX\x1b[0m`, "32=fg-green");
+console.log(`\x1b[${33}mXXXXXXXXX\x1b[0m`, "33=fg-yellow/golden");
+console.log(`\x1b[${34}mXXXXXXXXX\x1b[0m`, "34=fg-blue/purple");
+console.log(`\x1b[${35}mXXXXXXXXX\x1b[0m`, "35=fg-magenta/pink");
+console.log(`\x1b[${36}mXXXXXXXXX\x1b[0m`, "36=fg-turqoise/aqua");
+console.log(`\x1b[${37}mXXXXXXXXX\x1b[0m`, "37=fg-white/gray");
+console.log(`\x1b[${40}mXXXXXXXXX\x1b[0m`, "40=bg-black");
+console.log(`\x1b[${41}mXXXXXXXXX\x1b[0m`, "41=bg-red");
+console.log(`\x1b[${42}mXXXXXXXXX\x1b[0m`, "42=bg-green");
+console.log(`\x1b[${43}mXXXXXXXXX\x1b[0m`, "43=bg-yellow/golden");
+console.log(`\x1b[${44}mXXXXXXXXX\x1b[0m`, "44=bg-blue/purple");
+console.log(`\x1b[${45}mXXXXXXXXX\x1b[0m`, "45=bg-magenta/pink");
+console.log(`\x1b[${46}mXXXXXXXXX\x1b[0m`, "46=bg-turqoise/aqua");
+console.log(`\x1b[${47}mXXXXXXXXX\x1b[0m`, "47=bg-white/gray");
+console.log(`\x1b[${90}mXXXXXXXXX\x1b[0m`, "90=fg-bright-darker");
+console.log(`\x1b[${91}mXXXXXXXXX\x1b[0m`, "91=fg-bright-red");
+console.log(`\x1b[${92}mXXXXXXXXX\x1b[0m`, "92=fg-bright-green");
+console.log(`\x1b[${93}mXXXXXXXXX\x1b[0m`, "93=fg-bright-yellow/golden");
+console.log(`\x1b[${94}mXXXXXXXXX\x1b[0m`, "94=fg-bright-blue/purple");
+console.log(`\x1b[${95}mXXXXXXXXX\x1b[0m`, "95=fg-bright-magenta/pink");
+console.log(`\x1b[${96}mXXXXXXXXX\x1b[0m`, "96=fg-bright-turqoise/aqua");
+console.log(`\x1b[${97}mXXXXXXXXX\x1b[0m`, "97=fg-bright-white/gray");
+console.log(`\x1b[${100}mXXXXXXXXX\x1b[0m`, "100=bg-bright-gray");
+console.log(`\x1b[${101}mXXXXXXXXX\x1b[0m`, "101=bg-bright-red");
+console.log(`\x1b[${102}mXXXXXXXXX\x1b[0m`, "102=bg-bright-green");
+console.log(`\x1b[${103}mXXXXXXXXX\x1b[0m`, "103=bg-bright-yellow/golden");
+console.log(`\x1b[${104}mXXXXXXXXX\x1b[0m`, "104=bg-bright-blue/purple");
+console.log(`\x1b[${105}mXXXXXXXXX\x1b[0m`, "105=bg-bright-magenta/pink");
+console.log(`\x1b[${106}mXXXXXXXXX\x1b[0m`, "106=bg-bright-turqoise/aqua");
+console.log(`\x1b[${107}mXXXXXXXXX\x1b[0m`, "107=bg-bright-white/gray");
+```
+</details>
+
+Greyish...
+```
+console.log(7, `\x1b[${7}mXXXXXXXXX\x1b[0m`);
+console.log(47, `\x1b[${47}mXXXXXXXXX\x1b[0m`);
+console.log(107, `\x1b[${107}mXXXXXXXXX\x1b[0m`);
+```
+
+Loop
+```
+for (let i = 0; i < 150; i++) {
+    console.log(i, `\x1b[${i}mXXXXXXXXX\x1b[0m`);
+}
+```
+
+- `\e` or `\x1b` or `\033`
+- `\e[0m` Reset to default
+- https://ss64.com/nt/syntax-ansi.html
+- https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences
+- https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html
+
+
 ---
 
 # Websites
