@@ -313,3 +313,8 @@ for (let i = 0; i < 150; i++) {
 - https://www.reddit.com/r/unixporn
 - https://github.com/3rfaan/dotfiles
 - https://github.com/daimaou92/install-arch-vmwarefusion-techpreview
+
+# POSIX
+A set of standard operating system interfaces based on the Unix operating system
+
+POSIX compliant OS (ie: LINIX, MINIX, QNX, etc)
