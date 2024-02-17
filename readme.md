@@ -42,17 +42,23 @@
 | `some_command_output \| more`| combine with other commands also |
 
 # chmod
-||User|Group|Other|
-|-:|:-:|:-:|:-:|
-|__Read__|4|2|1|
-|__Write__|4|2|1|
-|__Execute__|4|2|1|
 
-#### permission
-- `r` Read
-- `w` Write
-- `x` Execute
-- `-` No Permission
+To check permissoin of a file or folder
+```bash
+ls -la
+```
+
+| Number | Permission | R+W+X |
+|--------|------------|-------|
+| 0      | – – –      | 0+0+0 |
+| 1      | – – x      | 0+0+1 |
+| 2      | – w –      | 0+2+0 |
+| 3      | – w x      | 0+2+1 |
+| 4      | r – –      | 4+0+0 |
+| 5      | r – x      | 4+0+1 |
+| 6      | r w –      | 4+2+0 |
+| 7      | r w x      | 4+2+1 |
+
 
 #### who
 - `u` User
@@ -60,25 +66,37 @@
 - `o` Other
 - `a` All (same as `ugo`)
 
+```bash
+chmod ugo yourfile
+chmod 400 yourfile
+```
+
+#### permission
+- `r` Read
+- `w` Write
+- `x` Execute
+- `-` No Permission
+
+
 #### operators
 - `=` set
 - `+` add
 - `-` remove
 
-```
+```bash
 $ chmod 777 filename
 $ chmod u=rwx,g=rwx,o=rwx filename
 $ chmod a=rwx filename
 ```
 
-```
+```bash
 $ chmod 664 filename
 $ chmod u=rw,g=rw,o=r filename
 $ chmod a+rwx,u-x,g-x,o-wx filename
 ```
 
 Folder `-R` for recursive
-```
+```bash
 $ chmod -R 777 foldername
 ```
 
