@@ -58,16 +58,17 @@ ls -la
           └───┴───┴───┘ └───┴───┴───┘ └───┴───┴───┘
 ```
 
-| Number | Permission | R+W+X | Commonly Used Numbers |
-|---|---|---|---|
-| 0 | – – – | 0+0+0 | REMOVE ALL PERMISSIONS |
-| 1 | – – X | 0+0+1 |  |
-| 2 | – W – | 0+2+0 |  |
-| 3 | – W X | 0+2+1 |  |
-| __4__ | __R – –__ | __4+0+0__ | __READ ONLY__ |
-| 5 | R – X | 4+0+1 |  |
-| __6__ | __R W –__ | __4+2+0__ | __READ + WRITE__ |
-| __7__ | __R W X__ | __4+2+1__ | __READ + WRITE + EXECUTE__ |
+| **Number** | Permission | R+W+X | Commonly Used Numbers |
+|:---:|:---:|:---:|---|
+| **0** | – – – | 0+0+0 | REMOVE ALL PERMISSIONS |
+| **1** | – – X | 0+0+1 |  |
+| **2** | – W – | 0+2+0 |  |
+| **3** | – W X | 0+2+1 |  |
+| **4** | R – – | 4+0+0 | READ ONLY |
+| **5** | R – X | 4+0+1 |  |
+| **6** | R W – | 4+2+0 | READ + WRITE |
+| **7** | R W X | 4+2+1 | READ + WRITE + EXECUTE |
+
 
 
 #### who
