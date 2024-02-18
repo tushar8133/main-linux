@@ -48,16 +48,26 @@ To check permissoin of a file or folder
 ls -la
 ```
 
-| Number | Permission | R+W+X |
-|--------|------------|-------|
-| 0      | – – –      | 0+0+0 |
-| 1      | – – x      | 0+0+1 |
-| 2      | – w –      | 0+2+0 |
-| 3      | – w x      | 0+2+1 |
-| 4      | r – –      | 4+0+0 |
-| 5      | r – x      | 4+0+1 |
-| 6      | r w –      | 4+2+0 |
-| 7      | r w x      | 4+2+1 |
+```
+          ┌───────────┐ ┌───────────┐ ┌───────────┐
+          │   USER    │ │   GROUP   │ │   OTHER   │
+┌───────┐ ├───────────┤ ├───────────┤ ├───────────┤ ┌────────┐
+│ chmod │ │     7     │ │     7     │ │     7     │ │ myfile │
+└───────┘ ├───┬───┬───┤ ├───┬───┬───┤ ├───┬───┬───┤ └────────┘
+          │ R │ W │ X │ │ R │ W │ X │ │ R │ W │ X │
+          └───┴───┴───┘ └───┴───┴───┘ └───┴───┴───┘
+```
+
+| Number | Permission | R+W+X | Commonly Used Numbers |
+|---|---|---|---|
+| 0 | – – – | 0+0+0 | REMOVE ALL PERMISSIONS |
+| 1 | – – X | 0+0+1 |  |
+| 2 | – W – | 0+2+0 |  |
+| 3 | – W X | 0+2+1 |  |
+| __4__ | __R – –__ | __4+0+0__ | __READ ONLY__ |
+| 5 | R – X | 4+0+1 |  |
+| __6__ | __R W –__ | __4+2+0__ | __READ + WRITE__ |
+| __7__ | __R W X__ | __4+2+1__ | __READ + WRITE + EXECUTE__ |
 
 
 #### who
@@ -67,7 +77,7 @@ ls -la
 - `a` All (same as `ugo`)
 
 ```bash
-chmod ugo yourfile
+chmod UGO yourfile
 chmod 400 yourfile
 ```
 
