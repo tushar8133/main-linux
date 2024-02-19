@@ -25,9 +25,9 @@
 | `ls -a` | list folders starting with . |
 | `ls -l` | show list in detail |
 | `ls -al` | `-a` & `-l` combined |
+| `ll` | similar to `ls -l` || mv | `mv ~/file.txt ~/folder` | Move Files |
 | `cd myfolder` | Change Directory |
 | `cd my-*` | Change Directory to folder starting from __my__ |
-| `ll` | similar to `ls -l` || mv | `mv ~/file.txt ~/folder` | Move Files |
 | `mv file1.txt file2.txt` | Rename Files |
 | `cp file1.txt ~/folder` | copy files |
 | `mkdir myfolder` | make directory |
