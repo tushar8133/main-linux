@@ -24,30 +24,24 @@
 - AppImage
 
 ## Distros
-- Puppy Linux
-- Gentoo
-- Tiny Core
-- Solus
 - Slackware
-- Fedora
-    - Amazon Linux 2
-    - RedHat
-        - OracleLinux
-        - CentOS
-            - ClearOS
-- Suse
-    - SLES (Suse Linux Enterprise Server)
+    - Suse (branched out)
         - OpenSuse
-- [ArchLinux](https://pkgbuild.com/~tpowa/archboot/iso/aarch64/latest)
-    - EndeavourOS
-    - Manjaro
-    - Garuda
+        - SLES (Suse Linux Enterprise Server)
+        - SLED (Suse Linux Enterprise Desktop)
+- RedHat
+    - Fedora (upstream)
+        - Amazon Linux 2
+    - OracleLinux (downstream)
+    - CentOS (upstream)
 - Debian
-    - MX Linux (Stable)
-    - Deepin (Stable)
-    - antiX
-    - Kali
-    - Ubuntu (Unity)
+    - Raspberry-Pi OS (upstream)
+    - MX Linux (upstream) (Stable)
+    - Deepin (upstream) (Stable)
+    - antiX (downstream)
+    - Kali (upstream)
+    - Solus (branched out)
+    - Ubuntu (downstream) (Unity)
         - Kubuntu (KDE plazma)
         - Lubuntu (LXDE)
         - Xubuntu (XFCE)
@@ -58,7 +52,19 @@
         - Pop!_OS
         - Zorin
         - Elementary
-
+- [ArchLinux](https://pkgbuild.com/~tpowa/archboot/iso/aarch64/latest)
+    - Manjaro (upstream)
+    - EndeavourOS
+    - Garuda
+- Puppy Linux
+- Tiny Core
+- Clear Linux
+- Enoch
+    - Gentoo
+- AOSP
+    - Android
+    - Cyanogenmod
+        - LineageOS
 
 # System Update
 - `sudo dnf update`
