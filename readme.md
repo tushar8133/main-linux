@@ -349,3 +349,10 @@ for (let i = 0; i < 150; i++) {
 A set of standard operating system interfaces based on the Unix operating system
 
 POSIX compliant OS (ie: LINIX, MINIX, QNX, etc)
+
+# SHUTDOWN / POWEROFF / REBOOT / RESTART
+- `sudo shutdown` default shutdown after 1 minute
+- `sudo shutdown now` shutdown immediately
+- `sudo shutdown -h now +120` shutdown after 120 minutes
+- `sudo shutdown -r now` restart immediately
+- `sudo shutdown -c` cancel shutdown if timer is running
