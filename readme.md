@@ -356,3 +356,15 @@ POSIX compliant OS (ie: LINIX, MINIX, QNX, etc)
 - `sudo shutdown -h now +120` shutdown after 120 minutes
 - `sudo shutdown -r now` restart immediately
 - `sudo shutdown -c` cancel shutdown if timer is running
+
+# Shell Script
+- ___0 is stdin___
+- ___1 is stdout___
+- ___2 is stderr___
+- `echo test > file.txt` To redirect _stdout_ to file.txt
+- `echo test 1> file.txt` same as above (1 is for _stdout_)
+- `echo test 2> file.txt` To redirect _stderr_ to file.txt (2 is _stderr_)
+- `echo test 1>&2` To merge _stdout_ to _stderr_
+- `echo test 2>&1` To merge _stderr_ to _stdout_
+- `echo test 2>&1 &` last ampersand will send all the process to a background terminal
+
