@@ -43,6 +43,11 @@
 | `less` | page by page decrement order |
 | `some_command_output \| more`| combine with other commands also |
 
+
+# youtube
+- https://www.youtube.com/watch?v=ZtqBQ68cfJc
+- https://www.youtube.com/watch?v=LKCVKw9CzFo
+
 # chmod
 
 To check permissoin of a file or folder
