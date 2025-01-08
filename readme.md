@@ -42,6 +42,7 @@
 | `more` | page by page increment order |
 | `less` | page by page decrement order |
 | `some_command_output \| more`| combine with other commands also |
+| `which node` | gives `nodejs` path |
 
 
 # youtube
