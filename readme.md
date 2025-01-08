@@ -374,3 +374,15 @@ POSIX compliant OS (ie: LINIX, MINIX, QNX, etc)
 - `echo test 2>&1` To merge _stderr_ to _stdout_
 - `echo test 2>&1 &` last ampersand will send all the process to a background terminal
 
+# Search content within archives
+
+- `zipgrep tushar backup.zip`
+- `zipgrep -i tushar backup.zip` case in-sensitive
+- `zipgrep -i [0-9]{10, 12} backup.zip` with regex
+- search within multiple zip files and outputs the result
+```
+for i in *.zip
+do
+   zipgrep -i tushar "$i" >> results.txt
+done
+```
