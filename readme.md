@@ -51,6 +51,7 @@
 | `date` | show date |
 | `cat notes.txt \| sort \| uniq` | piping parameters |
 | `top` | activity monitor |
+| `wc` | word count |
 | `du` | directory usage |
 | `du -h \| sort -h` | directory usage human readable and sorted as human readable |
 | `df` | get size of disk |
