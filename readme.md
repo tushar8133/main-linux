@@ -35,15 +35,22 @@
 | `rm -rf foldername` | remove directory with files (`-r` recursive, `-f` force) |
 | `rm test.txt` | remove files |
 | `locate -i redhouse**city*` | search in whole OS |
-| `pwd` | present working directory |
-| `whoami` | username |
 | `clear` | clear console |
 | `dmesg`| for kernel logs |
 | `more` | page by page increment order |
 | `less` | page by page decrement order |
 | `some_command_output \| more`| combine with other commands also |
 | `which node` | gives `nodejs` path |
-
+| `pwd` | present working directory |
+| `whoami` | username |
+| `who` | list currently logged-in users with their time spend |
+| `open notes.txt` `open .` | open notes.txt or open current folder |
+| `head` | show top 10 lines |
+| `tail` | show last 10 lines |
+| `tail -f` | show last 10 lines and keep waiting for new data |
+| `date` | show date |
+| `cat notes.txt \| sort \| uniq` | piping parameters |
+| `top` | activity monitor |
 
 # youtube
 - https://www.youtube.com/watch?v=ZtqBQ68cfJc
