@@ -51,6 +51,33 @@
 | `date` | show date |
 | `cat notes.txt \| sort \| uniq` | piping parameters |
 | `top` | activity monitor |
+| `du` | directory usage |
+| `du -h \| sort -h` | directory usage human readable and sorted as human readable |
+| `df` | get size of disk |
+| `ps` | process status |
+| `ps \| grep node` | process status for nodejs |
+| `ps a` | process status including other users |
+| `ps ax` | process status even without controlling signals |
+| `ps axww` | ww is for word wrap |
+| `kill -l` | doesnt kill. Just list all Signals |
+| `kill <PID>` | kill process (default is -15 or SIGTERM)|
+| `kill -9 <PID>` | `kill -KILL <PID>` pull the plug |
+| `kill -15 <PID>` | `kill -TERM <PID>` ask to terminate |
+| `kill -19 <PID>` | `kill -STOP <PID>` ask to stop |
+| `killall node` | SIGTERM for all running node process |
+| `killall -9 node` | SIGKILL for all running node process |
+| `bg` example `tail -r &` | `&` in the end or `^z` shortcut will send this process to background |
+| `jobs` | jobs will show all process send to background |
+| `fg <JOBS_ID>` | will bring back background processes in the front |
+| `cat oldnotes.txt \| xargs rm`  | `xargs` will convert the arguments and pass it to the piped command in the expected format, otherwise `rm` will throw error because it doesnt accept parameters that way |
+| `su tushar` | switch user |
+| `sudo` | superuser |
+| `su sudo` | switch to superuser |
+| `passwd` | change password |
+| `chmod` | change permission |
+| `chown Tushar file.txt` | change ownership. The file is now managed by user Tushar |
+| `chown Tushar:Admin myfile.txt` | the file is now managed by user Tushar and the group Admin |
+
 
 # youtube
 - https://www.youtube.com/watch?v=ZtqBQ68cfJc
