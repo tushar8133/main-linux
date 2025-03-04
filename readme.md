@@ -55,11 +55,7 @@
 | `du` | directory usage |
 | `du -h \| sort -h` | directory usage human readable and sorted as human readable |
 | `df` | get size of disk |
-| `ps` | process status |
-| `ps \| grep node` | process status for nodejs |
-| `ps a` | process status including other users |
-| `ps ax` | process status even without controlling signals |
-| `ps axww` | ww is for word wrap |
+| `ps -ax \| grep node` | ProcessStatus - check on which PID node is running |
 | `kill -l` | doesnt kill. Just list all Signals |
 | `kill <PID>` | kill process (default is -15 or SIGTERM)|
 | `kill -9 <PID>` | `kill -KILL <PID>` pull the plug |
