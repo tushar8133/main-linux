@@ -2,7 +2,7 @@
 | COMMANDS | DESCRIPTION |
 |-|-|
 | `man` | read manual |
-| `curl` | |
+| `curl` | `curl -LO https://github.com....` |
 | `ln` | |
 | `alias` | |
 | `sort -k2 test.txt` | |
