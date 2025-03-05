@@ -419,12 +419,9 @@ done
 ```
 
 # 7z 7zip
-- Install
+- Installation for MACOS
 	- https://7-zip.org/a/7z2407-mac.tar.xz
-	- Double click and extract
-	- Place folder to a safe place
-	- Right click `7zz` file, Press `Option` key, `Copy 7zz as Pathname` and Paste that path in `.zprofile`'s PATH variable
-	- Alternatively, you can paste the path and set `alias`, to use `7z` instead of `7zz`. Check the `.zprofile` section in this document.
+	- `zprofile` paste it `alias 7z="/Users/tushar/Setups/7z2407-mac/7zz"`
 - Frequently used commands
 	- `7z a filename ./folder/` default
 	- `7z a -mx0 filename ./folder/` compression store
