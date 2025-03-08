@@ -454,17 +454,17 @@ done
 - `lib32` -> `usr/lib32` OS libraries
 - `lib64` -> `usr/lib64` OS libraries
 - `libx32` -> `usr/libx32` OS libraries
-- `lost`+found 
+- `lost+found`
 - `media` Removable drives
 - `mnt` Mount Removable drives
 - `opt` Not used much, KDE, GNOME
-- `ргос` Kernel System Process Signals
+- `ргос` Process Signals, Kernel interacts with System
 - `root` Profile folder for Root user
 - `run` Mount Removable drives, but automatically, in newer systems
 - `sbin` -> `usr/sbin` System Binary. Terminal commands which can only be run by a Super user
 - `snap` Ubuntu related applications
 - `srv` 
-- `swapfile` 
+- `swapfile` swap file or could be a separate partition
 - `sys` 
 - `tmp` Temp files delete on shutdown
 - `usr` Unix-System-Resources. Shared directory for all users
