@@ -74,6 +74,7 @@
 | `chmod` | change permission |
 | `chown Tushar file.txt` | change ownership. The file is now managed by user Tushar |
 | `chown Tushar:Admin myfile.txt` | the file is now managed by user Tushar and the group Admin |
+| `sed -i "" "1s/^/VERSION\n/" index.html` | prepend text at top of the index.html file |
 
 
 # youtube
