@@ -470,3 +470,33 @@ done
 - `tmp` Temp files delete on shutdown
 - `usr` Unix-System-Resources. Shared directory for all users
 - `var` log files, www, wwwroot
+
+
+# Compile Source Code
+
+- Below command will install `GCC (GNU C compiler)` or `LLVM` for C language and other essential tools required for builing from source code
+- For Fedora, CentOS and similar distributions
+	```sh
+	sudo dnf install @development clang
+	```
+- For Debian, Elementary, Mint, and similar distributions
+	```sh
+	sudo apt install build-essential clang
+	```
+- Download source code and extract and go inside
+- Project could have been made with `Autotools` or `CMake`
+- If the project is built using `Autotools` then run these lines.
+	```sh
+	$ ./configure
+	$ make
+	$ sudo make install
+	```
+- If successful, then you can find the binary inside `./project/project/src/`
+- If the project is built using `CMake` then run these lines.
+	```sh
+	mkdir build
+	cd build
+	cmake ..
+	make
+	sudo make install
+	```
