@@ -3,6 +3,7 @@
 |-|-|
 | `man` | read manual |
 | `curl` | `curl -LO https://github.com....` |
+| `curl` | `curl -L https://github.com/releases/tags... > myfile` |
 | `ln` | |
 | `alias` | |
 | `sort -k2 test.txt` | |
