@@ -486,6 +486,7 @@ done
 	```
 - Download source code and extract and go inside
 - Project could have been made with `Autotools` or `CMake`
+- If the source code folder contains `configure` file, then it is built through `Autotools`
 - If the project is built using `Autotools` then run these lines.
 	```sh
 	$ ./configure
@@ -501,3 +502,8 @@ done
 	make
 	sudo make install
 	```
+- `make` command will just build the binaries
+- `sudo make install` will build the binaries and also install them
+- you can also place the binaries at this place `/usr/local/bin/`
+
+
