@@ -2,6 +2,7 @@
 | COMMANDS | DESCRIPTION |
 |-|-|
 | `man` | read manual |
+| `curl` | `curl -JLO "url_within_quotes"` |
 | `curl` | `curl -LO https://github.com....` |
 | `curl` | `curl -L https://github.com/releases/tags... > myfile` |
 | `ln` | |
