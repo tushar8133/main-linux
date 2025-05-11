@@ -185,6 +185,6 @@ install `xinit` (already done in previous steps) and run `startx` to start the c
 - Xcfgs
 - lxappearacne
 
-# ??
-- GTK+
-- QT
+# Widget toolkits
+- GTK+ (GIMP toolkit)
+- QT (Cute)

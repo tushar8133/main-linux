@@ -41,6 +41,8 @@
 | `dmesg`| for kernel logs |
 | `more` | page by page increment order |
 | `less` | page by page decrement order |
+| `less /var/log/mail.log === press [/] then enter your search and press [enter]` | |
+| `dmesg` | for kernel logs |
 | `some_command_output \| more`| combine with other commands also |
 | `which node` | gives `nodejs` path |
 | `pwd` | present working directory |
@@ -50,6 +52,7 @@
 | `head` | show top 10 lines |
 | `tail` | show last 10 lines |
 | `tail -f` | show last 10 lines and keep waiting for new data |
+| `tail -n 100 /var/log/mail.log \| more` | |
 | `date` | show date |
 | `cat notes.txt \| sort \| uniq` | piping parameters |
 | `top` | activity monitor |
@@ -506,5 +509,4 @@ done
 - `make` command will just build the binaries
 - `sudo make install` will build the binaries and also install them
 - you can also place the binaries at this place `/usr/local/bin/`
-
 
