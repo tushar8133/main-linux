@@ -510,3 +510,9 @@ done
 - `sudo make install` will build the binaries and also install them
 - you can also place the binaries at this place `/usr/local/bin/`
 
+
+# date format
+```sh
+$(date -u "+%Y-%m-%d_%H:%M:%S")
+date -u -Iseconds
+```
