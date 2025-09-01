@@ -513,6 +513,6 @@ done
 
 # date format
 ```sh
-$(date -u "+%Y-%m-%d_%H:%M:%S")
+date -u "+%Y-%m-%d_%H:%M:%S
 date -u -Iseconds
 ```
