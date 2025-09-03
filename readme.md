@@ -489,26 +489,28 @@ done
 	sudo apt install build-essential clang
 	```
 - Download source code and extract and go inside
-- Project could have been made with `Autotools` or `CMake`
-- If the source code folder contains `configure` file, then it is built through `Autotools`
-- If the project is built using `Autotools` then run these lines.
-	```sh
-	$ ./configure
-	$ make
-	$ sudo make install
-	```
-- If successful, then you can find the binary inside `./project/project/src/`
-- If the project is built using `CMake` then run these lines.
-	```sh
-	mkdir build
-	cd build
-	cmake ..
-	make
-	sudo make install
-	```
-- `make` command will just build the binaries
-- `sudo make install` will build the binaries and also install them
-- you can also place the binaries at this place `/usr/local/bin/`
+- Project's source code could have been built using these two:
+	- __Autotools__
+		- If it is build using Autotools, it might contain `configure` file.
+		- Then you can then follow these commands
+			```sh
+			$ ./configure			# this will generate a Makefile
+			$ make
+			$ sudo make install
+			```
+	- __CMake__
+		- If it is build using CMake, then you can then follow these commands
+			```sh
+			mkdir build
+			cd build
+			cmake .. 				# will generate a Makefile (not sure)
+			cd ..					# not sure to do this
+			make 					# will just build the binaries
+			sudo make install		# will install the binaries to machine
+			sudo make install_sw 	# only install the binaries, no man pages or tests
+			```
+- If successful, then you can find the binary inside `./project/project/src/` or something else
+- Manually, you can also place the binaries at this place `/usr/local/bin/`
 
 
 # date format
