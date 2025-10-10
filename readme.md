@@ -164,6 +164,7 @@ $ chmod -R 777 foldername
 `r` Recursive  
 `l` ListFilenamesOnly  
 
+* `grep -r "helloworld" .` search helloworld (or regex) in current directory recursively.
 * `grep "my-regex-here" filename.txt` single file
 * `grep "my-regex-here" *` all files in current directory
 * `grep -r "my-regex-here" ./dir1` recursive search inside directory
