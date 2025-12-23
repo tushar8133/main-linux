@@ -61,6 +61,7 @@
 - rxvt-unicode
 - terminator
 - konsole
+- alacritty
 
 ## Shell: Command Line Interpreters
 - bash
@@ -87,6 +88,7 @@
 ## Backgrounds
 - nitrogen
 - feh
+- xwallpaper
 
 ## Graphics, Games, FPS
 - MongoHud
@@ -114,6 +116,7 @@
 - fontawesome-fonts-web
 - ttf-incosolata
 - https://www.nerdfonts.com
+- nerd-fonts
 
 ## Theme
 - Nordic
