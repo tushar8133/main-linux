@@ -57,3 +57,7 @@ startx
   ```
   cat /etc/os-release
   ```
+- List Installed Applications
+  ```
+  ls /usr/share/applications
+  ```
