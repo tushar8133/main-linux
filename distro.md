@@ -27,13 +27,13 @@
 - Slackware
     - Suse (branched out)
         - OpenSuse
-        - SLES (Suse Linux Enterprise Server)
-        - SLED (Suse Linux Enterprise Desktop)
-- RedHat
-    - Fedora (upstream)
-        - Amazon Linux 2
-    - OracleLinux (downstream)
-    - CentOS (upstream)
+- Fedora
+    - Red Hat Enterprise Linux (RHEL)
+    - CentOS
+    - Rocky Linux
+    - Amazon Linux 2
+    - OracleLinux
+    
 - Debian
     - Raspberry-Pi OS (upstream)
     - MX Linux (upstream) (Stable)
