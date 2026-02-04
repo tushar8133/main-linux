@@ -6,6 +6,7 @@
 ## Preseed Server method
 - Prepare local server
   ```
+  npm i express
   node --watch server.mjs
   ```
 - Get IPv4 address instead of localhost
