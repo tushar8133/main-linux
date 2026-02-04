@@ -4,7 +4,7 @@ import os from "os";
 const app = express();
 
 app.use((req, res, next) => {
-  console.log(`File Accessed at ${Date.now()}`);
+  console.log(`File Accessed at ${new Date()}`);
   next();
 })
 

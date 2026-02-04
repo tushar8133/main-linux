@@ -36,7 +36,7 @@
 ```
 sudo apt update
 sudo apt upgrade -y
-sudo apt install xorg xinit i3 terminator chromium
+sudo apt install -y xorg xinit i3 terminator chromium
 echo "exec i3" > ~/.xinitrc
 startx
 ```
