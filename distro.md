@@ -27,20 +27,22 @@
 - Slackware
     - Suse (branched out)
         - OpenSuse
+        - SUSE Enterprise Linux
 - Fedora
     - Red Hat Enterprise Linux (RHEL)
-    - CentOS
-    - Rocky Linux
-    - Amazon Linux 2
-    - OracleLinux
-    
+        - ~CentOS~
+        - Rocky Linux
+        - Alma Linux
+        - Amazon Linux 2
+        - OracleLinux
+    - Nobara Project
+    - Bazzite
 - Debian
     - Raspberry-Pi OS (upstream)
     - MX Linux (upstream) (Stable)
     - Deepin (upstream) (Stable)
     - antiX (downstream)
     - Kali (upstream)
-    - Solus (branched out)
     - Ubuntu (downstream) (Unity)
         - Kubuntu (KDE plazma)
         - Lubuntu (LXDE)
@@ -56,9 +58,15 @@
     - Manjaro (upstream)
     - EndeavourOS
     - Garuda
+    - Arco Linux
+    - Omarchy
+    - CachyOS
 - Puppy Linux
 - Tiny Core
-- Clear Linux
+- ~Clear Linux (Intel)~
+- Solus (branched out from Ubuntu)
+- Alpine Linux
+- NixOS
 - Enoch
     - Gentoo
 - AOSP
