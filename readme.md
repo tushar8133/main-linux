@@ -64,7 +64,7 @@
 | `kill -l` | doesnt kill. Just list all Signals |
 | `kill <PID>` | kill process (default is -15 or SIGTERM)|
 | `kill -9 <PID>` | `kill -KILL <PID>` pull the plug |
-| `kill -15 <PID>` | `kill -TERM <PID>` ask to terminate |
+| `kill -15 <PID>` | `kill -TERM <PID>` ask to terminate. Kill gracefully |
 | `kill -19 <PID>` | `kill -STOP <PID>` ask to stop |
 | `killall node` | SIGTERM for all running node process |
 | `killall -9 node` | SIGKILL for all running node process |
@@ -451,31 +451,45 @@ done
 
  
 # directory structure
-- `bin` -> `usr/bin` all terminal commands binaries
-- `boot` GRUB and Kernel
-- `cdrom` cdrom
-- `dev` External devices like Harddisk, Printer, Modem
-- `etc` config files. config.d files
-- `home` User profile folder
-- `lib` -> `usr/lib` OS libraries
-- `lib32` -> `usr/lib32` OS libraries
-- `lib64` -> `usr/lib64` OS libraries
-- `libx32` -> `usr/libx32` OS libraries
-- `lost+found`
-- `media` Removable drives
-- `mnt` Mount Removable drives
-- `opt` Not used much, KDE, GNOME
-- `ргос` Process Signals, Kernel interacts with System
-- `root` Profile folder for Root user
-- `run` Mount Removable drives, but automatically, in newer systems
-- `sbin` -> `usr/sbin` System Binary. Terminal commands which can only be run by a Super user
-- `snap` Ubuntu related applications
-- `srv` 
-- `swapfile` swap file or could be a separate partition
-- `sys` 
-- `tmp` Temp files delete on shutdown
-- `usr` Unix-System-Resources. Shared directory for all users
-- `var` log files, www, wwwroot
+|||
+|-|-|
+| `bin` | -> `usr/bin` all terminal commands binaries |
+| `boot` | GRUB and Kernel |
+| `cdrom` | cdrom |
+| `dev` | External devices like Harddisk, Printer, Modem |
+| `etc` | config files. config.d files |
+| `home` | User profile folder |
+| `lib` | -> `usr/lib` OS libraries |
+| `lib32` | -> `usr/lib32` OS libraries |
+| `lib64` | -> `usr/lib64` OS libraries |
+| `libx32` | -> `usr/libx32` OS libraries |
+| `lost+ |found` |
+| `media` | Removable drives |
+| `mnt` | Mount Removable drives |
+| `opt` | Not used much, KDE, GNOME |
+| `ргос` | Process Signals, Kernel interacts with System |
+| `root` | Profile folder for Root user |
+| `run` | Mount Removable drives, but automatically, in newer systems |
+| `sbin` | -> `usr/sbin` System Binary. Terminal commands which can only be run by a Super user |
+| `snap` | Ubuntu related applications |
+| `srv` |  |
+| `swapfile` | swap file or could be a separate partition |
+| `sys` |  |
+| `tmp` | Temp files delete on shutdown |
+| `usr` | Unix-System-Resources. Shared directory for all users |
+| `var` | log files, www, wwwroot |
+
+# Directory structure
+bash searches the _command_ in these folders, in priorirty order
+- `/usr/local/sbin`
+- `/usr/local/bin`
+- `/usr/sbin`
+- `/usr/bin`
+- `/sbin`
+- `/bin`
+- `/usr/games`
+- `/usr/local/games`
+- `/snap/bin`
 
 
 # Compile Source Code
